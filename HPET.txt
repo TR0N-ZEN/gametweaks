@@ -1,0 +1,7 @@
+bcdedit /set useplatformclock false
+
+oder 
+
+bcdedit /deletevalue useplatformclock
+
+bcdedit /set useplatformclock true

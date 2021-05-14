@@ -1,0 +1,52 @@
+---Internet und Netzwerkoptimierung f�r low latency und speed---
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSMQ\Parameters
+�DWORD�-Wert mit dem Titel TcpNoDelay an. Setzt den Wert im Eintrag (Hexadezimal) auf 1.
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Tcpip\Parameters\Interfaces
+ind den Ordner mit den richtigen IPs (Gateway u.v.a. DHCP Adresse abgleichen)
+DWORD-Wert mit dem Titel �TcpAckFrequency� und "TCPNoDelay" dem Hexadezimal-Wert 1
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings 
+DWORD-Wert MaxConnectionPerServer 16(HEX)
+DWORD-Wert MaxConnectionPer1_0Server 16(HEX)r
+
+Gruppenrichtlinienmanager
+Administrative_Vorlagen/Netzwerk/QoS-Paketplaner
+reservierte Bandbreite beschr�nken deaktiviern
+
+Netzwerkkarte einstellen
+Netzwerkeinstellungen/Adapteroptionen/Eigenschaften/Kofigurieren/Erweitert
+Abladung gro�er �bertragung V2 (IP = Aktiviert
+Abladung gro�er �bertragung V2 (IP = Aktiviert
+ARP Offload = Deaktiviert
+Energy Efficient Ethernet = Deaktiviert
+Flie�kontrolle = Aktiviert				//rly?
+Geschwindigkeit & Duplex = 100Mbit/s Vollduplex 	//wohl doch ehr 1Gigabit/s Vollduplex
+Gigabit autom. deaktivieren = Deaktiviert
+Green-Ethernet = Deaktiviert
+Interrupt-Moderation = Aktiviert			//Was ist das?
+Interrupt-Mdoeration Rate =				//Was ist das?
+IPv4 Pr�fsummenabladung = Deaktiviert
+Jumbo-Rahmen = Deaktiviert
+Netzwerkadresse = Nicht vorhanden
+NS Offload = Deaktiviert
+Priorit�t & VLAN = Priorit�t & VLAN Deaktiviert		//rly?
+Puffer empfangen = 512					//Was ist das?
+Puffer �bertragen = 128					//was ist das?
+Seitenskallierung empfangen = Aktiviert			//Was ist das?
+TCP Pr�fsummenabladung (IPv4) = Deaktiviert
+TCP Pr�fsummenabladung (IPv6) = Deaktiviert
+UDP Pr�fsummenabladung (IPv4) = Deaktiviert
+UDP Pr�fsummenabladung (IPv6) = Deaktiviert
+Wake on Magic Packet = Aktiviert
+Wake on pattern match = Aktiviert
+Wake-On-Lan herunterfahren = Aktiviert
+WoL/Link-Geschwindigkeit reduzieren = 10Mbit/s zuerst	//was ist das?
+https://eu.battle.net/forums/de/wow/topic/6297800708
+
+http://www.c0ldmt.de/guides/csgo-andere-games-pc-optimierungen/
+
+Youtube beschleunigen: So umgehen Sie eine etwaige Drosselung
+cmd-Befehl: netsh advfirewall firewall add rule name="YoutubeCDN" dir=in action=block remoteip=173.194.55.0/24,206.111.0.0/16 enable=yes
+Konterbefehl: netsh advfirewall firewall delete rule name="YoutubeCDN"

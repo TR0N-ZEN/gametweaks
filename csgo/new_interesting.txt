@@ -1,0 +1,21 @@
+Client:
+rate 0.5 Mbps - rate 62500 1.0 Mbps - rate 125000 1.5 Mbps - rate 187500 1.57 Mbps - rate 196608 (new default) 2.0 Mbps - rate 250000 2.5 Mbps - rate 312500 3.0 Mbps - rate 375000 3.5 Mbps - rate 437500 4.0 Mbps - rate 500000 4.5 Mbps - rate 562500 5.0 Mbps - rate 625000 5.5 Mbps - rate 687500 6.0 Mbps - rate 750000 6.2 Mbps - rate 786432 (new Max)
+cl_updatevisibility
+explode 			// server only
+heartbeat 			// Force heartbeat of master servers
+m_customaccel_exponent 		// Default: 1.05 Mouse move is raised to this power before being scaled by scale factor.
+m_forward 			// Default: 1 Mouse forward factor
+m_pitch				// Default: 0.022 Mouse pitch factor
+mat_queue_priority
+	Default: 1
+mat_queue_report
+	Default: 0
+	Report thread stalls.  Positive number will filter by stalls >= time in ms.  -1 reports all locks.
+zoom_sensitivity_ratio_mouse
+
+Server:
+sv_forcepreload
+sv_friction
+sv_full_alltalk
+sv_gravity
+m_customaccel_exponent "1.05"

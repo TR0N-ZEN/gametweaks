@@ -1,0 +1,1 @@
+-malloc=system +mat_antialias 0 window -sm4 -high -threads 6 -useallavailablecores  -maxMem=12800 -malloc=system
